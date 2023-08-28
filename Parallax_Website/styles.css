@@ -1,0 +1,62 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    font-size: 16px;
+    font-family: "Lato", sans-serif ;
+    font-weight: 400;
+    line-height: 1.8rem;
+    color: #666;
+}
+.one{
+    background-image: url(https://avante.biz/wp-content/uploads/Natural-Landscape-Wallpapers-HD/Natural-Landscape-Wallpapers-HD-007.jpg);
+    width: 100%;
+    height: 100vh; 
+}
+.two{
+    background-image: url(https://www.wallpaperup.com/uploads/wallpapers/2016/10/27/1029085/beb893f65ce2848cde26457ab7bdfe84.jpg);
+    width: 100%;
+    height: 70vh; 
+}
+.three{
+    background-image: url(https://th.bing.com/th/id/R.7be28aba34d23c95be4a99b12be0b959?rik=nEaptd4o4dAuoA&riu=http%3a%2f%2ff.vividscreen.info%2fsoft%2f9190874678c0e1f1353d9eca8d2ac27a%2fBeautiful-Stunning-Landscape-1920x1200.jpg&ehk=F%2b4lnsOVPfdeO1HuBvsi2o7K96Ez3c9bML9gjBcXKZE%3d&risl=&pid=ImgRaw&r=0);
+    width: 100%;
+    height: 70vh; 
+}
+.one, .two, .three{
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.ptext{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: blue;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+.textbg{
+    background: #313534;
+    color: white;
+    padding: 20px;
+}
+.section {
+    padding: 50px 80px;
+    text-align: center;
+}
+.section-light{
+    background-color: #f4f4f4;
+    color: #666;
+}
+.section-dark{
+    background-color: #282e34;
+    color: #ddd;
+}
