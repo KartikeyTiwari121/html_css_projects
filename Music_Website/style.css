@@ -1,0 +1,566 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;400;600&family=Roboto+Condensed&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300;1,400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;;
+}
+@media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+  }
+  ul {
+    list-style: none;
+  }
+  a{
+    text-decoration: none;
+    color: white;
+  }
+/* nav starts */
+nav{
+    background-color: rgb(39, 3, 148);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 11vh;
+    position: fixed;
+    width: 100vw;
+    z-index: 10;
+}
+.nav1{
+    position: relative;
+    left: 10%;
+    font-size: 2.1rem;
+    color: white;
+}
+.nav2{
+    display: flex;
+    gap: 2vw;
+    width: 27vw;
+    position: relative;
+    right: 5%;
+    color: white;
+}
+.nav2 li{
+    /* list-style: none; */  
+    /* ^^ don't need to define this list property in each list we defined it globally on top of css */
+
+    font-size: 1.2rem;
+    font-weight: 300px;
+    position: relative;
+}
+.nav2 li::after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 5%;
+    bottom: 0;
+    left: 0;
+    
+}
+.nav2 li:hover::after{
+    background-color: wheat;
+    animation: navDash 1s 1;
+}
+@keyframes navDash {
+    0%{
+        width: 0;
+        left: 0;
+    }
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0%;
+        left: 100%;
+    }
+}
+
+/* nav section ends here */
+
+/* first(overview) section starts */
+.first{
+    height: 100vh;
+}
+.img1{
+    height: 100%;
+    width: 100%;
+}
+.first h1{
+    font-size: 6rem;
+    text-align: center;
+    color: white;
+    position: relative;
+    bottom: 70%;
+    padding: 1vw 12vw;
+}
+.first h3{
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    position: relative;
+    bottom: 70%;
+    padding: 1vw 12vw;
+}
+.first p{
+    font-size: 1.2rem;
+    text-align: center;
+    color: white;
+    position: relative;
+    bottom: 70%;
+    padding: 1vw 12vw;
+}
+
+/* second(music) section starts  */
+.second{
+    height: 100vh;
+    background-color: rgb(52, 1, 111);
+}
+.container{
+    text-align: center;  
+    padding: 7vh 15vh;
+    color: white;
+}
+.container h2{
+    font-size: 2.3rem;
+    margin-bottom: 3vh;
+}
+.container h4{
+    font-size: 1.4rem;
+    margin-bottom: 3vh;
+}
+.container p{
+    font-size: 1.2rem;
+    margin-bottom: 3vh;
+    font-weight: 200;
+}
+.primary-btn{
+    background-color: orangered;
+    color: white;
+    padding: 1.3vh 2vh;
+    margin: 2vh 0;
+    font-size: 1.1rem;
+}
+.ipad-iphone-img{
+    width: 100%;
+}
+.ipad-iphone-img img{
+    width: 80%;
+}
+/* third and(also music) section starts */
+.container1{
+    text-align: center;  
+    padding: 50vh 5vh 3vh;
+   color: white;
+}
+.container1 h3{
+    font-size: 1.6rem;
+    margin-bottom: 3vh;
+    font-weight: bold;
+    color: #000;
+}
+.container1 p{
+    font-size: 1.2rem;
+    margin-bottom: 3vh;
+    font-weight: 600;
+    color: #000;
+}
+.secondary-btn{
+    background-color: rgb(52, 1, 111);
+    color: white;
+    padding: 1.3vh 2vh;
+    margin: 2vh 0;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    transition: 0.5s ease-in-out;
+}
+.secondary-btn:hover{
+    transform: translateX(3px);
+    transition: 0.5s ease-in-out;
+}
+.mac-img img{
+    margin-top: 7vh;
+    width: 70%;
+}
+/* fourth(video) section starts */
+.fourth{
+    height: 100vh;
+}
+.container2{
+    text-align: center;
+    margin: 20% 10%;
+}
+.vid1{
+    width:100%;
+    height:100%;
+}
+video{
+    width: 100%;
+    z-index: -1;
+}
+@media (min-aspect-ratio:16/9){
+    video{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio:16/9){
+    video{
+        /* width: auto; */
+        height: 100%;
+    }
+}
+.container2{
+   position: relative;
+   bottom: 100%;
+}
+.container2 h3{
+    font-size: 1.9rem;
+    margin-bottom: 3vh;
+    font-weight: bold;
+    color: white;
+}
+.container2 p{
+    font-size: 1.3rem;
+    margin-bottom: 3vh;
+    font-weight: 400;
+    color: white;
+}
+.gift-section{
+    height: 100%;
+    padding-top: 15vh;
+    display: flex;
+    
+}
+.gift-card{
+    width: 80%;
+}
+.gift-card img{
+    width: 70%;
+    position: relative;
+    top: 5%;
+    bottom: 0%;
+    left: 20%;
+}
+.gift-content{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.gift-content h3{
+    font-size: 1.9rem;
+    margin-bottom: 4vh;
+    font-weight: bold;
+    color: black;
+    position: relative;
+    top: 5vh;
+    text-align: start;
+
+}
+.gift-content p{
+    font-size: 1.3rem;
+    margin-bottom: 2vh;
+    font-weight: 300;
+    color: black;
+    position: relative;
+    top: 3vh;
+    text-align: start;
+}
+.gift-content div{
+    text-align: start;
+}
+.gift-content hr{
+    margin-top: 3vh;
+}
+footer{
+    background-color: rgb(22, 8, 63);
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+.container5{
+    display: flex;
+    justify-content: space-around;
+    font-size: 18px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+.footer-links h4{
+    font-size: 1.2em;
+    padding-bottom: 10px;
+    border-bottom: 2px solid white;
+    margin-bottom: 10px;
+}
+.footer-lower{
+    background-color: rgb(31, 0, 126);
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* media Q starts here */
+@media screen and (max-width: 1300px) {
+    .nav2 {
+        width: 40vw;
+    }
+    .container{
+        padding-top: 15%;
+    }
+    .container1{
+       padding-top: 40vh;
+    }
+    .container1 h3 {
+        font-size: 2rem;
+    }
+    .container1 p {
+        font-size: 1.4rem;
+    }
+    .secondary-btn {
+        font-size: 1.5rem;
+    }
+    .ipad-iphone-img img {
+        width: 120%;
+    }
+    .ipad-iphone-img {
+        position: relative;
+        right: 10%;
+        margin-top: 10%;
+    }
+    .mac-img img {
+        width: 90%;
+    }
+    .container2 {
+        position: relative;
+        bottom: 95%;
+    }
+    .gift-section {
+        padding-top: 5vh;
+    }
+    .gift-card {
+        width: 90%;
+    }
+    .gift-content h3 {
+        font-size: 2.2rem;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    .first{
+        overflow: hidden;
+    }
+    .img1 {
+            width: 130%;
+    }
+    .ipad-iphone-img img {
+        width: 110%;
+    }
+    .ipad-iphone-img {
+        position: relative;
+        right: 8%;
+        margin-top: 10%;
+    }
+    .container1{
+        padding-top: 50vh;
+     }
+    .mac-img img {
+        width: 100%;
+    }
+    .fourth {
+        height: 70vh;
+    }
+    .container2 {
+        position: relative;
+        bottom: 115%;
+    }
+    .container2 h3 {
+        font-size: 2.3rem;
+    }
+    .container2 p {
+        font-size: 1.4rem;
+    }
+    .gift-section {
+        padding-top: 5vh;
+    }
+    /* .gift-card {
+        width: 90%;
+    } */
+    .gift-card img {
+        width: 85%;
+        position: relative;
+        top: 5%;
+        left: 10%;
+    }
+    .gift-content h3 {
+        font-size: 2rem;
+        margin-bottom: 2vh;
+    }
+    .secondary-btn {
+        padding: 1.3vh 2vh;
+        margin: 2vh 0;
+        font-size: 1rem;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .nav2 {
+        width: 45vw;
+    }
+    .container1 {
+        padding-top: 20vh;
+    }
+    .first{
+        overflow: hidden;
+    }
+    .img1 {
+            width: 160%;
+    }
+    .container1{
+        padding-top: 40vh;
+     }
+    video {
+        width: 112%;
+    }
+    .vid1 {
+        overflow: hidden;
+        /* used to increase the the width&height without overflowing */
+    }
+    .container2 {
+        position: relative;
+        bottom: 108%;
+    }
+    .container2 h3 {
+        font-size: 2.1rem;
+    }
+    .container2 p {
+        font-size: 1.2rem;
+    }
+    .gift-section {
+        padding-top: 5vh;
+    }
+    .gift-card img {
+            width: 90%;
+            position: relative;
+            top: 10%;
+            left: 8%;
+    }
+    .gift-content h3 {
+        font-size: 1.9rem;
+        margin-bottom: 2vh;
+    }
+    .gift-content p {
+        font-size: 1rem;
+    }
+    .secondary-btn {
+        padding: 1.3vh 2vh;
+        margin: 2vh 0;
+        font-size: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 620px) {
+    .nav2 {
+        width: 60vw;
+        gap: 1.6vw;
+        position: relative; 
+        right: -1%;
+    }
+    .nav1{
+        font-size: 2rem;
+        left: 4%;
+    }
+    .nav2 li{
+        font-size: 1rem;
+    }
+    .first{
+        overflow: hidden;
+    }
+    .first h1{
+        font-size: 4rem;
+        position: relative;
+        
+    }
+    .first h3{
+        font-size: 1.7rem;
+        position: relative;
+      
+    }
+    .first p{
+        font-size: 1.1rem;
+        position: relative;
+        
+    }
+    .img1 {
+            width: 172%;
+    }
+    .container {
+        padding: 7vh 1vh;
+        overflow: hidden;
+    }
+    .ipad-iphone-img img {
+        width: 124%;
+    }
+    .ipad-iphone-img {
+        position: relative;
+        right: 12%;
+        margin-top: 18%;
+    }
+    .container1 {
+        padding: 45vh 2vh 3vh;
+    }
+    .mac-img{
+        overflow: hidden;
+    }
+    .mac-img img {
+        width: 120%;
+        position: relative;
+        right: 10%;
+    }
+    .vid1 {
+        overflow: hidden;
+        width: 100%;
+    }
+    video {
+        width: 138%;
+    }
+    .container2 {
+        padding-top: 27%;
+        margin: 0 4%;
+    }
+    .container2 h3 {
+    font-size: 1.8rem;
+    }
+    .container2 p {
+    font-size: 1.1rem;
+    }
+    main{
+        overflow: hidden;
+        /* used this to control overflow of gift section max-width 620px */
+    }
+    .secondary-btn {
+        position: relative;
+        font-size: 1.4rem;
+    }
+    .gift-section {
+        padding-top: 3vh;
+        display: block; 
+    }
+    .gift-content{
+        padding-left: 5%;
+    }
+    .gift-card img {
+            width: 80%;
+            position: relative;
+            top: 0%;
+            left: 17%;
+    }
+    .footer-links{
+        margin: 2% 2%;
+    }
+
+  }
