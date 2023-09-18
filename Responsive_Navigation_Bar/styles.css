@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+  }
+body{
+    background: url(https://th.bing.com/th/id/R.19dbe5baca7adcb74741b3bded3364e4?rik=JUqIJs%2bMKlayHw&riu=http%3a%2f%2fwallup.net%2fwp-content%2fuploads%2f2015%2f12%2f258088-sunset-landscape-horizon.jpg&ehk=SLVNJeWGlQTp2U%2bdVbVAwCGvzuCDbJxAfV4HtvNFkSs%3d&risl=&pid=ImgRaw&r=0) no-repeat;
+    height: 100vh;
+    background-size: cover;
+    /* cover property fit images less zooming when we used no-repeat, we cal also say it image responsiveness */
+    background-position: center;
+}
+header{
+    background-color:darkorange;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+nav{
+    height: 60px;
+    width: 100%;
+    
+}
+.logo{
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    line-height: 60px;
+    color: white;
+    padding: 0 100px;
+    cursor: pointer;
+}
+nav ul{
+    float: right;
+    /* float is used to put ul on top rigth area of nav */
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 60px;
+    margin: 0 5px;
+    list-style: none;
+}
+nav ul li a{
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    padding: 7px 13px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+a.active, a:hover {
+    color: rgb(255, 21, 0);
+    transition: 0.5s ;
+}
+.checkBtn{
+    font-size: 1.5rem;
+    color: #fff;
+    float: right;
+    line-height: 60px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+    /* display none is used to hide icon till screen size is bigger than required */
+}
+#check{
+   display: none; 
+}
+
+/* welcome section */
+#welcome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    height: calc(100vh - 60px);
+    text-align: center;
+    padding: 10px;
+}
+#welcome h1{
+    font-size: 4vw;
+    margin-bottom: 1rem;
+    color: whitesmoke;
+}
+#welcome p{
+    text-align: center;
+    font-size: 1.9vw;
+}
+#about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    height: 100vh;
+    padding: 5px;
+    font-size: 1.8rem;
+}
+#service{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    height: 100vh;
+    padding: 5px;
+    font-size: 1.8rem;
+}
+#portfolio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(130, 101, 101);
+    color: #ececec;
+    height: 100vh;
+    padding: 5px;
+    font-size: 1.8rem;
+}
+#contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(233, 241, 76);
+    color: #000000;
+    height: 100vh;
+    padding: 5px;
+    font-size: 1.8rem;
+}
+
+/* responsive design */
+@media screen and (max-width: 952px) {
+    .logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    #welcome h1{
+        font-size: 3.5vw;
+    }
+    #welcome p{
+        font-size: 1.9vw;
+    }
+}
+@media screen and (max-width: 858px) {
+    .checkBtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: darkorange;
+        top: 60px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    #welcome h1{
+        font-size: 4.8vw;
+    }
+    #welcome p{
+        font-size: 2.8vw;
+    }
+}
+
+
+
+
